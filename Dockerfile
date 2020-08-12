@@ -22,7 +22,6 @@ RUN apt-get update && \
         libmagickwand-dev \
         git \
         cron \
-        nano \
         libxml2-dev
 
 # Install soap extention
@@ -74,13 +73,6 @@ RUN docker-php-ext-install gd && \
         --with-jpeg-dir=/usr/lib \
         --with-freetype-dir=/usr/include/freetype2 && \
     docker-php-ext-install gd
-
-#####################################
-# xDebug:
-#####################################
-
-# Install the xdebug extension
-RUN pecl install xdebug
 
 #####################################
 # PHP Memcached:
